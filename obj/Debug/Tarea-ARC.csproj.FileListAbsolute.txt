@@ -1,0 +1,13 @@
+C:\Users\Isai\Documents\Universidad\Arq\Tarea C#\Tarea-ARC\bin\Debug\Tarea-ARC.exe.config
+C:\Users\Isai\Documents\Universidad\Arq\Tarea C#\Tarea-ARC\bin\Debug\Tarea-ARC.exe
+C:\Users\Isai\Documents\Universidad\Arq\Tarea C#\Tarea-ARC\bin\Debug\Tarea-ARC.pdb
+C:\Users\Isai\Documents\Universidad\Arq\Tarea C#\Tarea-ARC\bin\Debug\Guna.UI.dll
+C:\Users\Isai\Documents\Universidad\Arq\Tarea C#\Tarea-ARC\obj\Debug\Tarea-ARC.csproj.AssemblyReference.cache
+C:\Users\Isai\Documents\Universidad\Arq\Tarea C#\Tarea-ARC\obj\Debug\Tarea-ARC.csproj.SuggestedBindingRedirects.cache
+C:\Users\Isai\Documents\Universidad\Arq\Tarea C#\Tarea-ARC\obj\Debug\Tarea_ARC.Form1.resources
+C:\Users\Isai\Documents\Universidad\Arq\Tarea C#\Tarea-ARC\obj\Debug\Tarea_ARC.Properties.Resources.resources
+C:\Users\Isai\Documents\Universidad\Arq\Tarea C#\Tarea-ARC\obj\Debug\Tarea-ARC.csproj.GenerateResource.cache
+C:\Users\Isai\Documents\Universidad\Arq\Tarea C#\Tarea-ARC\obj\Debug\Tarea-ARC.csproj.CoreCompileInputs.cache
+C:\Users\Isai\Documents\Universidad\Arq\Tarea C#\Tarea-ARC\obj\Debug\Tarea-ARC.csproj.CopyComplete
+C:\Users\Isai\Documents\Universidad\Arq\Tarea C#\Tarea-ARC\obj\Debug\Tarea-ARC.exe
+C:\Users\Isai\Documents\Universidad\Arq\Tarea C#\Tarea-ARC\obj\Debug\Tarea-ARC.pdb
