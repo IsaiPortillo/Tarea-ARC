@@ -69,5 +69,10 @@ namespace Tarea_ARC
                     break;
             }
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

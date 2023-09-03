@@ -11,3 +11,16 @@ C:\Users\Isai\Documents\Universidad\Arq\Tarea C#\Tarea-ARC\obj\Debug\Tarea-ARC.c
 C:\Users\Isai\Documents\Universidad\Arq\Tarea C#\Tarea-ARC\obj\Debug\Tarea-ARC.csproj.CopyComplete
 C:\Users\Isai\Documents\Universidad\Arq\Tarea C#\Tarea-ARC\obj\Debug\Tarea-ARC.exe
 C:\Users\Isai\Documents\Universidad\Arq\Tarea C#\Tarea-ARC\obj\Debug\Tarea-ARC.pdb
+D:\programación\Proyecto Arquitectura PC\Tarea-ARC\bin\Debug\Tarea-ARC.exe.config
+D:\programación\Proyecto Arquitectura PC\Tarea-ARC\bin\Debug\Tarea-ARC.exe
+D:\programación\Proyecto Arquitectura PC\Tarea-ARC\bin\Debug\Tarea-ARC.pdb
+D:\programación\Proyecto Arquitectura PC\Tarea-ARC\obj\Debug\Tarea-ARC.csproj.AssemblyReference.cache
+D:\programación\Proyecto Arquitectura PC\Tarea-ARC\obj\Debug\Tarea-ARC.csproj.SuggestedBindingRedirects.cache
+D:\programación\Proyecto Arquitectura PC\Tarea-ARC\obj\Debug\Tarea_ARC.Form1.resources
+D:\programación\Proyecto Arquitectura PC\Tarea-ARC\obj\Debug\Tarea_ARC.Properties.Resources.resources
+D:\programación\Proyecto Arquitectura PC\Tarea-ARC\obj\Debug\Tarea-ARC.csproj.GenerateResource.cache
+D:\programación\Proyecto Arquitectura PC\Tarea-ARC\obj\Debug\Tarea-ARC.csproj.CoreCompileInputs.cache
+D:\programación\Proyecto Arquitectura PC\Tarea-ARC\obj\Debug\Tarea-ARC.csproj.CopyComplete
+D:\programación\Proyecto Arquitectura PC\Tarea-ARC\obj\Debug\Tarea-ARC.exe
+D:\programación\Proyecto Arquitectura PC\Tarea-ARC\obj\Debug\Tarea-ARC.pdb
+D:\programación\Proyecto Arquitectura PC\Tarea-ARC\obj\Debug\Tarea_ARC.Menu.resources
