@@ -39,17 +39,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.Barra = new System.Windows.Forms.Panel();
-            this.btnRes = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.btnMaxi = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.ContenedorForm = new System.Windows.Forms.Panel();
             this.PanelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.Barra.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnRes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMaxi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -174,9 +170,7 @@
             // Barra
             // 
             this.Barra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(80)))), ((int)(((byte)(0)))));
-            this.Barra.Controls.Add(this.btnRes);
             this.Barra.Controls.Add(this.btnCerrar);
-            this.Barra.Controls.Add(this.btnMaxi);
             this.Barra.Controls.Add(this.btnMinimizar);
             this.Barra.Dock = System.Windows.Forms.DockStyle.Top;
             this.Barra.Location = new System.Drawing.Point(0, 0);
@@ -184,19 +178,6 @@
             this.Barra.Size = new System.Drawing.Size(834, 29);
             this.Barra.TabIndex = 1;
             this.Barra.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Barra_MouseDown);
-            // 
-            // btnRes
-            // 
-            this.btnRes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRes.Image = ((System.Drawing.Image)(resources.GetObject("btnRes.Image")));
-            this.btnRes.Location = new System.Drawing.Point(757, 2);
-            this.btnRes.Name = "btnRes";
-            this.btnRes.Size = new System.Drawing.Size(25, 25);
-            this.btnRes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnRes.TabIndex = 12;
-            this.btnRes.TabStop = false;
-            this.btnRes.Click += new System.EventHandler(this.btnRes_Click);
             // 
             // btnCerrar
             // 
@@ -211,26 +192,12 @@
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // btnMaxi
-            // 
-            this.btnMaxi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaxi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMaxi.Image = ((System.Drawing.Image)(resources.GetObject("btnMaxi.Image")));
-            this.btnMaxi.Location = new System.Drawing.Point(757, 2);
-            this.btnMaxi.Name = "btnMaxi";
-            this.btnMaxi.Size = new System.Drawing.Size(25, 25);
-            this.btnMaxi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnMaxi.TabIndex = 10;
-            this.btnMaxi.TabStop = false;
-            this.btnMaxi.Visible = false;
-            this.btnMaxi.Click += new System.EventHandler(this.btnMaxi_Click);
-            // 
             // btnMinimizar
             // 
             this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
-            this.btnMinimizar.Location = new System.Drawing.Point(717, 3);
+            this.btnMinimizar.Location = new System.Drawing.Point(757, 2);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(25, 25);
             this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -240,6 +207,7 @@
             // 
             // ContenedorForm
             // 
+            this.ContenedorForm.AutoSize = true;
             this.ContenedorForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
             this.ContenedorForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ContenedorForm.Location = new System.Drawing.Point(216, 29);
@@ -265,11 +233,10 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.Barra.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnRes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMaxi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -286,9 +253,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel Barra;
         private System.Windows.Forms.PictureBox btnCerrar;
-        private System.Windows.Forms.PictureBox btnMaxi;
         private System.Windows.Forms.PictureBox btnMinimizar;
-        private System.Windows.Forms.PictureBox btnRes;
         private System.Windows.Forms.Panel ContenedorForm;
     }
 }

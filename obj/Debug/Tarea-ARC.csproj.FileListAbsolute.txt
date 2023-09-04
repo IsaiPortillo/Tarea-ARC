@@ -24,3 +24,4 @@ D:\programación\Proyecto Arquitectura PC\Tarea-ARC\obj\Debug\Tarea-ARC.csproj.C
 D:\programación\Proyecto Arquitectura PC\Tarea-ARC\obj\Debug\Tarea-ARC.exe
 D:\programación\Proyecto Arquitectura PC\Tarea-ARC\obj\Debug\Tarea-ARC.pdb
 D:\programación\Proyecto Arquitectura PC\Tarea-ARC\obj\Debug\Tarea_ARC.Menu.resources
+C:\Users\Isai\Documents\Universidad\Arq\Tarea C#\Tarea-ARC\obj\Debug\Tarea_ARC.Menu.resources
