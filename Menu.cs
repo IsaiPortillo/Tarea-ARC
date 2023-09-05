@@ -116,7 +116,9 @@ namespace Tarea_ARC
 
         private void btnCorreccion_Click(object sender, EventArgs e)
         {
-
+            abrirF<Form2>();
+            //Cambiamos el color del button a dar click
+            btnConversor.BackColor = Color.FromArgb(166, 166, 166);
         }
     }
     
