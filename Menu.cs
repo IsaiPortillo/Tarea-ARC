@@ -42,22 +42,6 @@ namespace Tarea_ARC
             Application.Exit();
         }
 
-        private void btnMaxi_Click(object sender, EventArgs e)
-        {
-            //Indicamos que al dar click se maximize
-            this.WindowState = FormWindowState.Maximized;
-            btnRes.Visible = true;
-            btnMaxi.Visible = false;
-        }
-
-        private void btnRes_Click(object sender, EventArgs e)
-        {
-            //Indicamos que al dar click el formulario regrese a su tamaño predeterminado
-            this.WindowState = FormWindowState.Normal;
-            btnRes.Visible = false;
-            btnMaxi.Visible = true;
-        }
-
         //Nos permite mover la ventana del formulario a traves de la barra de titulo
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private static extern void ReleaseCapture();
@@ -132,7 +116,9 @@ namespace Tarea_ARC
 
         private void btnCorreccion_Click(object sender, EventArgs e)
         {
-
+            abrirF<Form2>();
+            //Cambiamos el color del button a dar click
+            btnConversor.BackColor = Color.FromArgb(166, 166, 166);
         }
     }
     
