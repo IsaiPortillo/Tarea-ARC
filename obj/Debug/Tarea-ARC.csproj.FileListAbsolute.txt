@@ -38,3 +38,4 @@ C:\Users\LENOVO\Desktop\ARC2\Tarea-ARC\bin\Debug\Tarea-ARC.exe.config
 C:\Users\LENOVO\Desktop\ARC2\Tarea-ARC\bin\Debug\Tarea-ARC.exe
 C:\Users\LENOVO\Desktop\ARC2\Tarea-ARC\bin\Debug\Tarea-ARC.pdb
 C:\Users\LENOVO\Desktop\ARC2\Tarea-ARC\obj\Debug\Tarea-ARC.csproj.CopyComplete
+C:\Users\Isai\Documents\Universidad\Arq\Tarea C#\Tarea-ARC\obj\Debug\Tarea_ARC.Form2.resources
