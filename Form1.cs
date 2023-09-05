@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tarea_ARC.Validations;
 
 namespace Tarea_ARC
 {
     public partial class Form1 : Form
     {
+        private validar validator;
         public Form1()
         {
             InitializeComponent();
@@ -22,12 +24,27 @@ namespace Tarea_ARC
         {
 
         }
+        public void Alerta()
+        {
+            MessageBoxButtons buttons = MessageBoxButtons.OK;
+            MessageBoxIcon icon = MessageBoxIcon.Warning;
+
+            string message = "No se puede representar el numero ingresado porque se ha sobrepasado la capacidad del procesador\n--> 16 BITS";
+            string caption = "Limite de capacidad";
+
+            // Mostrar el cuadro de diálogo de mensaje
+            MessageBox.Show(message, caption, buttons, icon);
+            valueTextBox.Text = "";
+            binaryOutputLabel.Text = "";
+        }
 
         private void InitializeComboBox()
         {
             dataTypeComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             dataTypeComboBox.Items.AddRange(new string[] { "Entero sin signo", "Entero con signo", "Flotante", "Carácter", "Cadena de caracteres" });
             dataTypeComboBox.SelectedIndex = 0;
+            lblError.Text = "";
+            validator = new validar();
         }
 
         private void convertButton_Click(object sender, EventArgs e)
@@ -37,13 +54,39 @@ namespace Tarea_ARC
             switch (selectedIndex)
             {
                 case 0: // Entero sin signo
-                    uint unsignedIntValue = uint.Parse(valueTextBox.Text);
-                    binaryOutputLabel.Text = Convert.ToString(unsignedIntValue, 2).PadLeft(16, '0');
+                    try
+                    {
+                        if(int.Parse(valueTextBox.Text) <= 32767)
+                        {
+                            uint unsignedIntValue = uint.Parse(valueTextBox.Text);
+                            binaryOutputLabel.Text = Convert.ToString(unsignedIntValue, 2).PadLeft(16, '0');
+                        }
+                        else
+                        {
+                            Alerta();
+                        }
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Ha ocurrido un error");
+                    }
                     break;
 
                 case 1: // Entero con signo
-                    short signedIntValue = short.Parse(valueTextBox.Text);
-                    binaryOutputLabel.Text = Convert.ToString(signedIntValue, 2).PadLeft(16, signedIntValue < 0 ? '1' : '0');
+                    try
+                    {
+                        if(int.Parse(valueTextBox.Text) <= 32768)
+                        {
+                            short signedIntValue = short.Parse("-"+valueTextBox.Text);
+                            binaryOutputLabel.Text = Convert.ToString(signedIntValue, 2).PadLeft(16, signedIntValue < 0 ? '1' : '0');
+                        }
+                        else { Alerta(); }
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Ha ocurrido un error");
+                    }
+                    
                     break;
 
                 case 2: // Flotante (simplificado)
@@ -73,6 +116,13 @@ namespace Tarea_ARC
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void valueTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(dataTypeComboBox.SelectedIndex == 0 || dataTypeComboBox.SelectedIndex == 1) {
+                validator.unsignedNumerValidation(sender, e, lblError);
+            }
         }
     }
 }

@@ -25,3 +25,16 @@ D:\programación\Proyecto Arquitectura PC\Tarea-ARC\obj\Debug\Tarea-ARC.exe
 D:\programación\Proyecto Arquitectura PC\Tarea-ARC\obj\Debug\Tarea-ARC.pdb
 D:\programación\Proyecto Arquitectura PC\Tarea-ARC\obj\Debug\Tarea_ARC.Menu.resources
 C:\Users\Isai\Documents\Universidad\Arq\Tarea C#\Tarea-ARC\obj\Debug\Tarea_ARC.Menu.resources
+C:\Users\LENOVO\Desktop\ARC2\Tarea-ARC\obj\Debug\Tarea-ARC.csproj.AssemblyReference.cache
+C:\Users\LENOVO\Desktop\ARC2\Tarea-ARC\obj\Debug\Tarea-ARC.csproj.SuggestedBindingRedirects.cache
+C:\Users\LENOVO\Desktop\ARC2\Tarea-ARC\obj\Debug\Tarea_ARC.Form1.resources
+C:\Users\LENOVO\Desktop\ARC2\Tarea-ARC\obj\Debug\Tarea_ARC.Menu.resources
+C:\Users\LENOVO\Desktop\ARC2\Tarea-ARC\obj\Debug\Tarea_ARC.Properties.Resources.resources
+C:\Users\LENOVO\Desktop\ARC2\Tarea-ARC\obj\Debug\Tarea-ARC.csproj.GenerateResource.cache
+C:\Users\LENOVO\Desktop\ARC2\Tarea-ARC\obj\Debug\Tarea-ARC.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Desktop\ARC2\Tarea-ARC\obj\Debug\Tarea-ARC.exe
+C:\Users\LENOVO\Desktop\ARC2\Tarea-ARC\obj\Debug\Tarea-ARC.pdb
+C:\Users\LENOVO\Desktop\ARC2\Tarea-ARC\bin\Debug\Tarea-ARC.exe.config
+C:\Users\LENOVO\Desktop\ARC2\Tarea-ARC\bin\Debug\Tarea-ARC.exe
+C:\Users\LENOVO\Desktop\ARC2\Tarea-ARC\bin\Debug\Tarea-ARC.pdb
+C:\Users\LENOVO\Desktop\ARC2\Tarea-ARC\obj\Debug\Tarea-ARC.csproj.CopyComplete
