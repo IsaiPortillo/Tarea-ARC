@@ -53,7 +53,6 @@ C:\Users\LENOVO\Desktop\ARC\Tarea-ARC\obj\Debug\Tarea-ARC.csproj.CoreCompileInpu
 C:\Users\LENOVO\Desktop\ARC\Tarea-ARC\obj\Debug\Tarea-ARC.csproj.CopyComplete
 C:\Users\LENOVO\Desktop\ARC\Tarea-ARC\obj\Debug\Tarea-ARC.exe
 C:\Users\LENOVO\Desktop\ARC\Tarea-ARC\obj\Debug\Tarea-ARC.pdb
-<<<<<<< HEAD
 D:\programación\Proyecto Arquitectura PC\Version2.0\Tarea-ARC\bin\Debug\Tarea-ARC.exe.config
 D:\programación\Proyecto Arquitectura PC\Version2.0\Tarea-ARC\bin\Debug\Tarea-ARC.exe
 D:\programación\Proyecto Arquitectura PC\Version2.0\Tarea-ARC\bin\Debug\Tarea-ARC.pdb
@@ -68,5 +67,3 @@ D:\programación\Proyecto Arquitectura PC\Version2.0\Tarea-ARC\obj\Debug\Tarea-A
 D:\programación\Proyecto Arquitectura PC\Version2.0\Tarea-ARC\obj\Debug\Tarea-ARC.csproj.CopyComplete
 D:\programación\Proyecto Arquitectura PC\Version2.0\Tarea-ARC\obj\Debug\Tarea-ARC.exe
 D:\programación\Proyecto Arquitectura PC\Version2.0\Tarea-ARC\obj\Debug\Tarea-ARC.pdb
-=======
->>>>>>> be6c091345e2b0eed020b7d344c2669326d0371c
