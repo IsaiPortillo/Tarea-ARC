@@ -42,11 +42,13 @@
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.ContenedorForm = new System.Windows.Forms.Panel();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.PanelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.Barra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
+            this.ContenedorForm.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelMenu
@@ -209,12 +211,24 @@
             // 
             this.ContenedorForm.AutoSize = true;
             this.ContenedorForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.ContenedorForm.Controls.Add(this.lblTitulo);
             this.ContenedorForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ContenedorForm.Location = new System.Drawing.Point(216, 29);
             this.ContenedorForm.Name = "ContenedorForm";
             this.ContenedorForm.Size = new System.Drawing.Size(618, 493);
             this.ContenedorForm.TabIndex = 2;
             this.ContenedorForm.Paint += new System.Windows.Forms.PaintEventHandler(this.ContenedorForm_Paint);
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Bookman Old Style", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
+            this.lblTitulo.Location = new System.Drawing.Point(208, 18);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(195, 32);
+            this.lblTitulo.TabIndex = 11;
+            this.lblTitulo.Text = "BIENVENIDO";
             // 
             // Menu
             // 
@@ -235,6 +249,8 @@
             this.Barra.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
+            this.ContenedorForm.ResumeLayout(false);
+            this.ContenedorForm.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,5 +271,6 @@
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.Panel ContenedorForm;
+        private System.Windows.Forms.Label lblTitulo;
     }
 }
