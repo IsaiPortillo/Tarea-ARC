@@ -63,6 +63,7 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logic\conversiones.cs" />
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>

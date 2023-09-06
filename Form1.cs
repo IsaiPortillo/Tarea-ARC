@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Tarea_ARC.Validations;
+using Tarea_ARC.Logic;
 
 namespace Tarea_ARC
 {
     public partial class Form1 : Form
     {
         private validar validator;
+        private conversiones conversion;
         public Form1()
         {
             InitializeComponent();
@@ -45,6 +47,7 @@ namespace Tarea_ARC
             dataTypeComboBox.SelectedIndex = 0;
             lblError.Text = "";
             validator = new validar();
+            conversion = new conversiones();
         }
 
         private void convertButton_Click(object sender, EventArgs e)
@@ -90,10 +93,27 @@ namespace Tarea_ARC
                     break;
 
                 case 2: // Flotante (simplificado)
-                    float floatValue = float.Parse(valueTextBox.Text);
-                    byte[] floatBytes = BitConverter.GetBytes(floatValue);
-                    string binaryRepresentation = string.Join("", floatBytes);
-                    binaryOutputLabel.Text = binaryRepresentation;
+                    try
+                    {
+                        double doubleValue = double.Parse(valueTextBox.Text);
+                        int parteEntera = (int)doubleValue;
+                        double parteDecimal = doubleValue - parteEntera;
+                        string binarioParteEntera = conversion.EnteroABinario(Math.Abs(parteEntera));
+                        string binarioParteDecimal = conversion.DecimalABinario(Math.Abs(parteDecimal), 4);
+                        string valueBinary = conversion.RetornoBinario(binarioParteEntera, binarioParteDecimal, parteEntera);
+                        if (valueBinary.Length <= 16)
+                        {
+                            binaryOutputLabel.Text = valueBinary;
+                        }
+                        else
+                        {
+                            Alerta();
+                        }
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Ha ocurrido un error");
+                    }
                     break;
 
                 case 3: // Carácter
@@ -122,6 +142,10 @@ namespace Tarea_ARC
         {
             if(dataTypeComboBox.SelectedIndex == 0 || dataTypeComboBox.SelectedIndex == 1) {
                 validator.unsignedNumerValidation(sender, e, lblError);
+            }
+            else if(dataTypeComboBox.SelectedIndex == 2)
+            {
+                validator.floatNumerValidation(sender, e, lblError);
             }
         }
     }
