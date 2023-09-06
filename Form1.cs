@@ -126,8 +126,11 @@ namespace Tarea_ARC
                         if (valueBinary.Length <= 16)
                         {
                             binaryOutputLabel.Text = valueBinary;
+<<<<<<< HEAD
                             res.Text = valueTextBox.Text + " =";
                             valueTextBox.Clear();
+=======
+>>>>>>> be6c091345e2b0eed020b7d344c2669326d0371c
                         }
                         else
                         {
