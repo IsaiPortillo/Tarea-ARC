@@ -25,25 +25,7 @@ namespace Tarea_ARC
 
         private void dataTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Opciones_EnteroS.Items.Clear();
 
-            // Obténiendo la selección actual de el ComboBox principal
-            string seleccion = dataTypeComboBox.SelectedItem.ToString();
-
-            //Verificamos si la opccion seleccionada es elentero con signo
-            if(seleccion == "Entero con signo")
-            {
-                //De ser asi hacemos visible un nuevo comboBox
-                Opciones_EnteroS.Visible = true;
-                //Agregamos las opciones
-                Opciones_EnteroS.Items.Add("Metodo 1");
-                Opciones_EnteroS.Items.Add("Metodo 2");
-            }
-            else
-            {
-                //Si no es entero con signo el combo sera invisible
-                Opciones_EnteroS.Visible = false;
-            }
         }
         //funcion que nos permitira mostrar una alerta
         public void Alerta()
@@ -95,8 +77,6 @@ namespace Tarea_ARC
                             uint unsignedIntValue = uint.Parse(valueTextBox.Text);
                             //convertimos a binario y al mismo tiempo el resultado se le asigna al textBox donde estara el resultado
                             binaryOutputLabel.Text = Convert.ToString(unsignedIntValue, 2).PadLeft(16, '0');
-                            res.Text = valueTextBox.Text + " =";
-                            valueTextBox.Clear();
                         }
                         else//si se sobrepasa el limite se muestra la alerta
                         {
@@ -120,8 +100,6 @@ namespace Tarea_ARC
                             short signedIntValue = short.Parse("-"+valueTextBox.Text);
                             //convertimos el numero a binario y asignamos ese valor al TextBox donde se muestra el resultado
                             binaryOutputLabel.Text = Convert.ToString(signedIntValue, 2).PadLeft(16, signedIntValue < 0 ? '1' : '0');
-                            res.Text = valueTextBox.Text + " =";
-                            valueTextBox.Clear();
                         }
                         else { Alerta(); }//si se sobrepasa el limite se mostrara la alerta
                     }
@@ -168,8 +146,6 @@ namespace Tarea_ARC
                     char charValue = valueTextBox.Text[0];
                     //lo convertimos a binario y asignamos ese valor al campo de respuesta
                     binaryOutputLabel.Text = Convert.ToString(charValue, 2).PadLeft(16, '0');
-                    res.Text = valueTextBox.Text + " =";
-                    valueTextBox.Clear();
                     break;
 
                 case 4: // Cadena de caracteres
@@ -195,7 +171,6 @@ namespace Tarea_ARC
                     {
                         MessageBox.Show("Ha ocurrido un error");
                     }
-                    binaryOutputLabel.Text = binaryString;
                     break;
             }
         }
