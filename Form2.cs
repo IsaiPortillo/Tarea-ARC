@@ -88,5 +88,32 @@ namespace Tarea_ARC
             return Regex.IsMatch(input, "^[01]+$");
         }
 
+        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        //Menu de opciones de los metodos
+        private void btnMetodos_Click(object sender, EventArgs e)
+        {
+            //Al dar click se mostraran las opciones
+            Opciones.Visible = true;
+
+        }
+
+        private void btnPariedad_Click(object sender, EventArgs e)
+        {
+            Opciones.Visible = false;
+        }
+
+        private void btnHamming_Click(object sender, EventArgs e)
+        {
+            Opciones.Visible = false;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

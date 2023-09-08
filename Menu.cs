@@ -106,6 +106,10 @@ namespace Tarea_ARC
             {
                 btnConversor.BackColor = Color.FromArgb(39, 52, 69);
             }
+            if (Application.OpenForms["Form2"] == null)
+            {
+                btnCorreccion.BackColor = Color.FromArgb(39, 52, 69);
+            }
 
         }
 
@@ -118,7 +122,7 @@ namespace Tarea_ARC
         {
             abrirF<Form2>();
             //Cambiamos el color del button a dar click
-            btnConversor.BackColor = Color.FromArgb(166, 166, 166);
+            btnCorreccion.BackColor = Color.FromArgb(166, 166, 166);
         }
     }
     

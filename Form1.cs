@@ -24,7 +24,25 @@ namespace Tarea_ARC
 
         private void dataTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            Opciones_EnteroS.Items.Clear();
 
+            // Obténiendo la selección actual de el ComboBox principal
+            string seleccion = dataTypeComboBox.SelectedItem.ToString();
+
+            //Verificamos si la opccion seleccionada es elentero con signo
+            if(seleccion == "Entero con signo")
+            {
+                //De ser asi hacemos visible un nuevo comboBox
+                Opciones_EnteroS.Visible = true;
+                //Agregamos las opciones
+                Opciones_EnteroS.Items.Add("Metodo 1");
+                Opciones_EnteroS.Items.Add("Metodo 2");
+            }
+            else
+            {
+                //Si no es entero con signo el combo sera invisible
+                Opciones_EnteroS.Visible = false;
+            }
         }
         public void Alerta()
         {
@@ -63,6 +81,8 @@ namespace Tarea_ARC
                         {
                             uint unsignedIntValue = uint.Parse(valueTextBox.Text);
                             binaryOutputLabel.Text = Convert.ToString(unsignedIntValue, 2).PadLeft(16, '0');
+                            res.Text = valueTextBox.Text + " =";
+                            valueTextBox.Clear();
                         }
                         else
                         {
@@ -82,6 +102,8 @@ namespace Tarea_ARC
                         {
                             short signedIntValue = short.Parse("-"+valueTextBox.Text);
                             binaryOutputLabel.Text = Convert.ToString(signedIntValue, 2).PadLeft(16, signedIntValue < 0 ? '1' : '0');
+                            res.Text = valueTextBox.Text + " =";
+                            valueTextBox.Clear();
                         }
                         else { Alerta(); }
                     }
@@ -104,6 +126,8 @@ namespace Tarea_ARC
                         if (valueBinary.Length <= 16)
                         {
                             binaryOutputLabel.Text = valueBinary;
+                            res.Text = valueTextBox.Text + " =";
+                            valueTextBox.Clear();
                         }
                         else
                         {
@@ -119,6 +143,8 @@ namespace Tarea_ARC
                 case 3: // Carácter
                     char charValue = valueTextBox.Text[0];
                     binaryOutputLabel.Text = Convert.ToString(charValue, 2).PadLeft(16, '0');
+                    res.Text = valueTextBox.Text + " =";
+                    valueTextBox.Clear();
                     break;
 
                 case 4: // Cadena de caracteres
@@ -128,7 +154,10 @@ namespace Tarea_ARC
                     {
                         binaryString += Convert.ToString(c, 2).PadLeft(16, '0');
                     }
+                    res.Text= valueTextBox.Text;
                     binaryOutputLabel.Text = binaryString;
+                    res.Text = valueTextBox.Text + " =";
+                    valueTextBox.Clear();
                     break;
             }
         }
