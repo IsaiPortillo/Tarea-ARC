@@ -25,8 +25,28 @@ namespace Tarea_ARC
 
         private void dataTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            Opciones_EnteroS.Items.Clear();
+
+            // Obténiendo la selección actual de el ComboBox principal
+            string seleccion = dataTypeComboBox.SelectedItem.ToString();
+
+            //Verificamos si la opccion seleccionada es elentero con signo
+            if (seleccion == "Entero con signo")
+            {
+                //De ser asi hacemos visible un nuevo comboBox
+                Opciones_EnteroS.Visible = true;
+                //Agregamos las opciones
+                Opciones_EnteroS.Items.Add("Metodo 1");
+                Opciones_EnteroS.Items.Add("Metodo 2");
+            }
+            else
+            {
+                //Si no es entero con signo el combo sera invisible
+                Opciones_EnteroS.Visible = false;
+            }
 
         }
+
         //funcion que nos permitira mostrar una alerta
         public void Alerta()
         {
@@ -77,6 +97,9 @@ namespace Tarea_ARC
                             uint unsignedIntValue = uint.Parse(valueTextBox.Text);
                             //convertimos a binario y al mismo tiempo el resultado se le asigna al textBox donde estara el resultado
                             binaryOutputLabel.Text = Convert.ToString(unsignedIntValue, 2).PadLeft(16, '0');
+                            res.Text = valueTextBox.Text + " =";
+                            valueTextBox.Clear();
+                            errorProvider1.Clear();
                         }
                         else//si se sobrepasa el limite se muestra la alerta
                         {
@@ -85,7 +108,9 @@ namespace Tarea_ARC
                     }
                     catch//calquier excepcion producida mostramos un MessageBox para indicar que ha surgido un error
                     {
+                        errorProvider1.SetError(convertButton, "Hay campos vacios");
                         MessageBox.Show("Ha ocurrido un error");
+                        
                     }
                     break;
 
@@ -100,11 +125,15 @@ namespace Tarea_ARC
                             short signedIntValue = short.Parse("-"+valueTextBox.Text);
                             //convertimos el numero a binario y asignamos ese valor al TextBox donde se muestra el resultado
                             binaryOutputLabel.Text = Convert.ToString(signedIntValue, 2).PadLeft(16, signedIntValue < 0 ? '1' : '0');
+                            res.Text = valueTextBox.Text + " =";
+                            valueTextBox.Clear();
+                            errorProvider1.Clear();
                         }
                         else { Alerta(); }//si se sobrepasa el limite se mostrara la alerta
                     }
                     catch//Manejo por si ocurre algun problema
                     {
+                        errorProvider1.SetError(convertButton, "Hay campos vacios");
                         MessageBox.Show("Ha ocurrido un error");
                     }
                     
@@ -129,6 +158,9 @@ namespace Tarea_ARC
                         if (valueBinary.Length <= 16)//verificamos que no se sobrepase el limite de bits de la maquina
                         {
                             binaryOutputLabel.Text = valueBinary;//mostramos el valor
+                            res.Text = valueTextBox.Text + " =";
+                            valueTextBox.Clear();
+                            errorProvider1.Clear();
                         }
                         else//si se sobrepasa se muestra una alerta
                         {
@@ -137,38 +169,62 @@ namespace Tarea_ARC
                     }
                     catch//manejo de excepciones
                     {
+                        errorProvider1.SetError(convertButton, "Hay campos vacios");
                         MessageBox.Show("Ha ocurrido un error");
                     }
                     break;
 
                 case 3: // Carácter
-                    //capturamos el caracter ingresado
-                    char charValue = valueTextBox.Text[0];
-                    //lo convertimos a binario y asignamos ese valor al campo de respuesta
-                    binaryOutputLabel.Text = Convert.ToString(charValue, 2).PadLeft(16, '0');
+                    if (valueTextBox.Text == "")
+                    {
+                        errorProvider1.SetError(convertButton, "Hay campos vacios");
+                        MessageBox.Show("Debe ingresar un dato");
+                    }
+                    else
+                    {
+                        //capturamos el caracter ingresado
+                        char charValue = valueTextBox.Text[0];
+                        //lo convertimos a binario y asignamos ese valor al campo de respuesta
+                        binaryOutputLabel.Text = Convert.ToString(charValue, 2).PadLeft(16, '0');
+                        res.Text = valueTextBox.Text + " =";
+                        valueTextBox.Clear();
+                        errorProvider1.Clear();
+                    }
                     break;
 
                 case 4: // Cadena de caracteres
                     //manejo de excepciones
                     try
                     {
-                        string stringValue = valueTextBox.Text;//capturamos la cadena de caracteres
-                        string binaryString = "";//declaracion de variable para almacenar la expresion binaria
-                        foreach (char c in stringValue)//recorremos la expresion ingresada para convertir letra por letra
+                        if (valueTextBox.Text == "")
                         {
-                            binaryString += Convert.ToString(c, 2).PadLeft(8, '0');//a la variable de respuesta agregamos la expresion binaria de la conversion
+                            errorProvider1.SetError(convertButton, "Hay campos vacios");
+                            MessageBox.Show("Debe ingresar un dato");
                         }
-                        if (binaryString.Length > 16)//si la expresion sobrepasa el limite para representar, entonces se muestra la alerta
+                        else
                         {
-                            Alerta();
-                        }
-                        else//si no hay sobrepaso del limite, se manda la respuesta al TextBox
-                        {
-                            binaryOutputLabel.Text = binaryString;
+                            string stringValue = valueTextBox.Text;//capturamos la cadena de caracteres
+                            string binaryString = "";//declaracion de variable para almacenar la expresion binaria
+                            foreach (char c in stringValue)//recorremos la expresion ingresada para convertir letra por letra
+                            {
+                                binaryString += Convert.ToString(c, 2).PadLeft(8, '0');//a la variable de respuesta agregamos la expresion binaria de la conversion
+                            }
+                            res.Text = valueTextBox.Text + " =";
+                            valueTextBox.Clear();
+                            errorProvider1.Clear();
+                            if (binaryString.Length > 16)//si la expresion sobrepasa el limite para representar, entonces se muestra la alerta
+                            {
+                                Alerta();
+                            }
+                            else//si no hay sobrepaso del limite, se manda la respuesta al TextBox
+                            {
+                                binaryOutputLabel.Text = binaryString;
+                            }
                         }
                     }
                     catch//manejo de excepciones
                     {
+                        
                         MessageBox.Show("Ha ocurrido un error");
                     }
                     break;
