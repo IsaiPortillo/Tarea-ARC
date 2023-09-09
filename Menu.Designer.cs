@@ -36,32 +36,35 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnCorreccion = new System.Windows.Forms.Button();
             this.btnConversor = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.Barra = new System.Windows.Forms.Panel();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.ContenedorForm = new System.Windows.Forms.Panel();
-            this.lblTitulo = new System.Windows.Forms.Label();
+            this.btnInicio = new System.Windows.Forms.PictureBox();
+            this.btnRepo = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.PanelMenu.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.Barra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
-            this.ContenedorForm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnInicio)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelMenu
             // 
             this.PanelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
+            this.PanelMenu.Controls.Add(this.btnRepo);
+            this.PanelMenu.Controls.Add(this.btnInicio);
             this.PanelMenu.Controls.Add(this.panel2);
+            this.PanelMenu.Controls.Add(this.panel1);
             this.PanelMenu.Controls.Add(this.panel3);
             this.PanelMenu.Controls.Add(this.panel4);
             this.PanelMenu.Controls.Add(this.btnSalir);
             this.PanelMenu.Controls.Add(this.btnCorreccion);
             this.PanelMenu.Controls.Add(this.btnConversor);
-            this.PanelMenu.Controls.Add(this.panel1);
             this.PanelMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.PanelMenu.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PanelMenu.ForeColor = System.Drawing.Color.White;
             this.PanelMenu.Location = new System.Drawing.Point(0, 29);
             this.PanelMenu.Name = "PanelMenu";
             this.PanelMenu.Size = new System.Drawing.Size(216, 493);
@@ -150,25 +153,6 @@
             this.btnConversor.UseVisualStyleBackColor = false;
             this.btnConversor.Click += new System.EventHandler(this.btnConversor_Click);
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(0, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(216, 105);
-            this.panel1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bookman Old Style", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(54, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 35);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Logo";
-            // 
             // Barra
             // 
             this.Barra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(80)))), ((int)(((byte)(0)))));
@@ -211,7 +195,6 @@
             // 
             this.ContenedorForm.AutoSize = true;
             this.ContenedorForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.ContenedorForm.Controls.Add(this.lblTitulo);
             this.ContenedorForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ContenedorForm.Location = new System.Drawing.Point(216, 29);
             this.ContenedorForm.Name = "ContenedorForm";
@@ -219,16 +202,41 @@
             this.ContenedorForm.TabIndex = 2;
             this.ContenedorForm.Paint += new System.Windows.Forms.PaintEventHandler(this.ContenedorForm_Paint);
             // 
-            // lblTitulo
+            // btnInicio
             // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Bookman Old Style", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(208, 18);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(195, 32);
-            this.lblTitulo.TabIndex = 11;
-            this.lblTitulo.Text = "BIENVENIDO";
+            this.btnInicio.Image = ((System.Drawing.Image)(resources.GetObject("btnInicio.Image")));
+            this.btnInicio.Location = new System.Drawing.Point(5, 0);
+            this.btnInicio.Name = "btnInicio";
+            this.btnInicio.Size = new System.Drawing.Size(211, 140);
+            this.btnInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnInicio.TabIndex = 11;
+            this.btnInicio.TabStop = false;
+            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
+            // 
+            // btnRepo
+            // 
+            this.btnRepo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(52)))), ((int)(((byte)(69)))));
+            this.btnRepo.FlatAppearance.BorderSize = 0;
+            this.btnRepo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRepo.Image = ((System.Drawing.Image)(resources.GetObject("btnRepo.Image")));
+            this.btnRepo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRepo.Location = new System.Drawing.Point(9, 267);
+            this.btnRepo.Name = "btnRepo";
+            this.btnRepo.Size = new System.Drawing.Size(201, 44);
+            this.btnRepo.TabIndex = 12;
+            this.btnRepo.Text = "         Info";
+            this.btnRepo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRepo.UseVisualStyleBackColor = false;
+            this.btnRepo.Click += new System.EventHandler(this.btnRepo_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Location = new System.Drawing.Point(2, 267);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(5, 44);
+            this.panel1.TabIndex = 10;
             // 
             // Menu
             // 
@@ -244,13 +252,10 @@
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.Menu_Load);
             this.PanelMenu.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.Barra.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
-            this.ContenedorForm.ResumeLayout(false);
-            this.ContenedorForm.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnInicio)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -259,8 +264,6 @@
         #endregion
 
         private System.Windows.Forms.Panel PanelMenu;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnCorreccion;
         private System.Windows.Forms.Button btnConversor;
@@ -271,6 +274,8 @@
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.Panel ContenedorForm;
-        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.PictureBox btnInicio;
+        private System.Windows.Forms.Button btnRepo;
+        private System.Windows.Forms.Panel panel1;
     }
 }
