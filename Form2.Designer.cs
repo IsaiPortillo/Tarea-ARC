@@ -28,16 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.inputTextBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.calculateParityButton = new System.Windows.Forms.Button();
             this.outputTextBox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.simulateErrorButton = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.resultLabel = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.resultLabel = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.Opciones = new System.Windows.Forms.Panel();
             this.btnHamming = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -45,42 +46,35 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnMetodos = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             this.Opciones.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // inputTextBox
             // 
             this.inputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inputTextBox.Location = new System.Drawing.Point(270, 44);
+            this.inputTextBox.Location = new System.Drawing.Point(270, 42);
             this.inputTextBox.Name = "inputTextBox";
             this.inputTextBox.Size = new System.Drawing.Size(191, 20);
             this.inputTextBox.TabIndex = 0;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(219, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(301, 18);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Ingrese los datos originales (0s y 1s): ";
-            // 
             // calculateParityButton
             // 
+            this.calculateParityButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.calculateParityButton.FlatAppearance.BorderSize = 2;
             this.calculateParityButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.calculateParityButton.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calculateParityButton.ForeColor = System.Drawing.Color.White;
-            this.calculateParityButton.Location = new System.Drawing.Point(270, 70);
+            this.calculateParityButton.Location = new System.Drawing.Point(270, 68);
             this.calculateParityButton.Name = "calculateParityButton";
-            this.calculateParityButton.Size = new System.Drawing.Size(191, 29);
+            this.calculateParityButton.Size = new System.Drawing.Size(191, 30);
             this.calculateParityButton.TabIndex = 2;
             this.calculateParityButton.Text = "Calcular";
             this.calculateParityButton.UseVisualStyleBackColor = true;
@@ -89,76 +83,89 @@
             // outputTextBox
             // 
             this.outputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.outputTextBox.Location = new System.Drawing.Point(270, 143);
+            this.outputTextBox.Location = new System.Drawing.Point(270, 134);
             this.outputTextBox.Name = "outputTextBox";
             this.outputTextBox.ReadOnly = true;
             this.outputTextBox.Size = new System.Drawing.Size(191, 20);
             this.outputTextBox.TabIndex = 3;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(289, 112);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(147, 18);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Datos con paridad";
-            // 
             // simulateErrorButton
             // 
+            this.simulateErrorButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.simulateErrorButton.FlatAppearance.BorderSize = 2;
             this.simulateErrorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.simulateErrorButton.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simulateErrorButton.ForeColor = System.Drawing.Color.White;
-            this.simulateErrorButton.Location = new System.Drawing.Point(270, 169);
+            this.simulateErrorButton.Location = new System.Drawing.Point(270, 160);
             this.simulateErrorButton.Name = "simulateErrorButton";
-            this.simulateErrorButton.Size = new System.Drawing.Size(191, 30);
+            this.simulateErrorButton.Size = new System.Drawing.Size(191, 29);
             this.simulateErrorButton.TabIndex = 5;
             this.simulateErrorButton.Text = "Simular Error";
             this.simulateErrorButton.UseVisualStyleBackColor = true;
             this.simulateErrorButton.Click += new System.EventHandler(this.simulateErrorButton_Click);
             // 
-            // label3
+            // groupBox1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(127, 215);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(229, 19);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Resultado de la Corrección";
+            this.groupBox1.Controls.Add(this.resultLabel);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.Opciones);
+            this.groupBox1.Controls.Add(this.panel4);
+            this.groupBox1.Controls.Add(this.btnMetodos);
+            this.groupBox1.Controls.Add(this.inputTextBox);
+            this.groupBox1.Controls.Add(this.calculateParityButton);
+            this.groupBox1.Controls.Add(this.outputTextBox);
+            this.groupBox1.Controls.Add(this.simulateErrorButton);
+            this.groupBox1.Location = new System.Drawing.Point(36, 130);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(539, 283);
+            this.groupBox1.TabIndex = 9;
+            this.groupBox1.TabStop = false;
             // 
             // resultLabel
             // 
             this.resultLabel.AutoSize = true;
             this.resultLabel.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.resultLabel.Location = new System.Drawing.Point(128, 245);
+            this.resultLabel.Location = new System.Drawing.Point(133, 237);
             this.resultLabel.Name = "resultLabel";
             this.resultLabel.Size = new System.Drawing.Size(84, 18);
-            this.resultLabel.TabIndex = 7;
+            this.resultLabel.TabIndex = 19;
             this.resultLabel.Text = "respuesta";
             // 
-            // groupBox1
+            // label3
             // 
-            this.groupBox1.Controls.Add(this.Opciones);
-            this.groupBox1.Controls.Add(this.panel4);
-            this.groupBox1.Controls.Add(this.btnMetodos);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.inputTextBox);
-            this.groupBox1.Controls.Add(this.resultLabel);
-            this.groupBox1.Controls.Add(this.calculateParityButton);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.outputTextBox);
-            this.groupBox1.Controls.Add(this.simulateErrorButton);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(40, 145);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(534, 283);
-            this.groupBox1.TabIndex = 9;
-            this.groupBox1.TabStop = false;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(132, 206);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(229, 19);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "Resultado de la Corrección";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(293, 110);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(147, 18);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Datos con paridad";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(217, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(301, 18);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Ingrese los datos originales (0s y 1s): ";
             // 
             // Opciones
             // 
@@ -166,10 +173,10 @@
             this.Opciones.Controls.Add(this.panel3);
             this.Opciones.Controls.Add(this.btnPariedad);
             this.Opciones.Controls.Add(this.panel2);
-            this.Opciones.Location = new System.Drawing.Point(16, 79);
+            this.Opciones.Location = new System.Drawing.Point(19, 77);
             this.Opciones.Name = "Opciones";
             this.Opciones.Size = new System.Drawing.Size(188, 116);
-            this.Opciones.TabIndex = 12;
+            this.Opciones.TabIndex = 15;
             this.Opciones.Visible = false;
             // 
             // btnHamming
@@ -221,10 +228,10 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(35, 27);
+            this.panel4.Location = new System.Drawing.Point(38, 25);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(10, 46);
-            this.panel4.TabIndex = 11;
+            this.panel4.TabIndex = 14;
             // 
             // btnMetodos
             // 
@@ -233,44 +240,48 @@
             this.btnMetodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMetodos.Font = new System.Drawing.Font("Bookman Old Style", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMetodos.ForeColor = System.Drawing.Color.White;
-            this.btnMetodos.Location = new System.Drawing.Point(41, 28);
+            this.btnMetodos.Location = new System.Drawing.Point(44, 26);
             this.btnMetodos.Name = "btnMetodos";
             this.btnMetodos.Size = new System.Drawing.Size(138, 45);
-            this.btnMetodos.TabIndex = 8;
+            this.btnMetodos.TabIndex = 13;
             this.btnMetodos.Text = "Metodos";
             this.btnMetodos.UseVisualStyleBackColor = true;
             this.btnMetodos.Click += new System.EventHandler(this.btnMetodos_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 13;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Bookman Old Style", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(59, 9);
+            this.lblTitulo.Location = new System.Drawing.Point(60, 12);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(515, 32);
-            this.lblTitulo.TabIndex = 10;
+            this.lblTitulo.TabIndex = 14;
             this.lblTitulo.Text = "Simulación de Correción de Errores";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(277, 53);
+            this.pictureBox1.Location = new System.Drawing.Point(277, 47);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(68, 68);
-            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox2
+            // errorProvider1
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(5, 9);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 12;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.errorProvider1.ContainerControl = this;
             // 
             // Form2
             // 
@@ -278,9 +289,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
             this.ClientSize = new System.Drawing.Size(609, 440);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblTitulo);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form2";
@@ -288,8 +299,9 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.Opciones.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -298,23 +310,24 @@
         #endregion
 
         private System.Windows.Forms.TextBox inputTextBox;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button calculateParityButton;
         private System.Windows.Forms.TextBox outputTextBox;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button simulateErrorButton;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label resultLabel;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnMetodos;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel Opciones;
-        private System.Windows.Forms.Button btnPariedad;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnHamming;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel Opciones;
+        private System.Windows.Forms.Button btnHamming;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnPariedad;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button btnMetodos;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label resultLabel;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

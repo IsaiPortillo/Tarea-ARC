@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,7 +22,7 @@ namespace Tarea_ARC
 
         private void Menu_Load(object sender, EventArgs e)
         {
-
+            btnInicio_Click(null, e);
         }
 
         private void PanelMenu_Paint(object sender, PaintEventArgs e)
@@ -106,7 +108,7 @@ namespace Tarea_ARC
             {
                 btnConversor.BackColor = Color.FromArgb(39, 52, 69);
             }
-            if (Application.OpenForms["Form2"] == null)
+            if (Application.OpenForms["Forms2"] == null)
             {
                 btnCorreccion.BackColor = Color.FromArgb(39, 52, 69);
             }
@@ -123,6 +125,28 @@ namespace Tarea_ARC
             abrirF<Form2>();
             //Cambiamos el color del button a dar click
             btnCorreccion.BackColor = Color.FromArgb(166, 166, 166);
+        }
+
+        private void btnInicio_Click(object sender, EventArgs e)
+        {
+            abrirF<Inicio>();
+        }
+
+        private void btnRepo_Click(object sender, EventArgs e)
+        {
+            //Definimos una variable con la url del repositorio
+            String URL = "https://github.com/IsaiPortillo/Tarea-ARC/tree/main";
+
+            try
+            {
+                //Abrimos el navegador
+                Process.Start(URL);
+            }
+            catch (Exception ex)
+            {
+                // Maneja cualquier excepción que pueda ocurrir al dar click en la opcion
+                MessageBox.Show("Lo sentimos ha ocuurido un error al abrir la página web: " + ex.Message);
+            }
         }
     }
     
