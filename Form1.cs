@@ -36,8 +36,9 @@ namespace Tarea_ARC
                 //De ser asi hacemos visible un nuevo comboBox
                 Opciones_EnteroS.Visible = true;
                 //Agregamos las opciones
-                Opciones_EnteroS.Items.Add("Metodo 1");
-                Opciones_EnteroS.Items.Add("Metodo 2");
+                Opciones_EnteroS.Items.Add("Representacion en Exceso 2");
+                Opciones_EnteroS.Items.Add("Representacion por Bit mas significativo");
+                Opciones_EnteroS.DropDownStyle = ComboBoxStyle.DropDownList;
             }
             else
             {
@@ -64,6 +65,7 @@ namespace Tarea_ARC
             //reiniciamos los valores de los textBox donde estan los valores ingresados y mostrados
             valueTextBox.Text = "";
             binaryOutputLabel.Text = "";
+            res.Text = "";
         }
         //funcion para cargar informacion al iniciar el form
         private void InitializeComboBox()
@@ -117,19 +119,41 @@ namespace Tarea_ARC
                 case 1: // Entero con signo
                     try
                     {
-                        //verificamos si el numero es menor al limite de datos permitidos
-                        if(int.Parse(valueTextBox.Text) <= 32768)
+                        if (Opciones_EnteroS.Text == "Representacion en Exceso 2")
                         {
-                            //convetimos el numero negativo en una expresion short que nos permite manejar numeros negativos para poder ser 
-                            //convertidos a binarios
-                            short signedIntValue = short.Parse("-"+valueTextBox.Text);
-                            //convertimos el numero a binario y asignamos ese valor al TextBox donde se muestra el resultado
-                            binaryOutputLabel.Text = Convert.ToString(signedIntValue, 2).PadLeft(16, signedIntValue < 0 ? '1' : '0');
-                            res.Text = valueTextBox.Text + " =";
-                            valueTextBox.Clear();
-                            errorProvider1.Clear();
+                            //verificamos si el numero es menor al limite de datos permitidos
+                            if (int.Parse(valueTextBox.Text) <= 32768)
+                            {
+                                //convetimos el numero negativo en una expresion short que nos permite manejar numeros negativos para poder ser 
+                                //convertidos a binarios
+                                short signedIntValue = short.Parse("-" + valueTextBox.Text);
+                                //convertimos el numero a binario y asignamos ese valor al TextBox donde se muestra el resultado
+                                binaryOutputLabel.Text = Convert.ToString(signedIntValue, 2).PadLeft(16, signedIntValue < 0 ? '1' : '0');
+                                res.Text = valueTextBox.Text + " =";
+                                valueTextBox.Clear();
+                                errorProvider1.Clear();
+                            }
+                            else { Alerta(); }//si se sobrepasa el limite se mostrara la alerta
                         }
-                        else { Alerta(); }//si se sobrepasa el limite se mostrara la alerta
+                        else if(Opciones_EnteroS.Text == "Representacion por Bit mas significativo")
+                        {
+                            if (int.Parse(valueTextBox.Text) <= 32767)
+                            {
+                                //capturamos el valor que se ha ingresado
+                                int bitSignificativo = int.Parse(valueTextBox.Text);
+                                //en esta variable se guarda la conversion de la parte entera que retorna el metodo EnteroABinario de la clase Validations
+                                string conversionS = conversion.EnteroABinario(bitSignificativo);
+                                //declaramos una variable que contendra la respuesta que deseamos mostrar, uniendo las variables anteriores
+                                string valueSBinary = "1" + conversionS;
+                                res.Text = valueTextBox.Text + " =";
+                                binaryOutputLabel.Text = valueSBinary;
+                            }
+                            else { Alerta(); }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Debe seleccionar una alternativa de representacion");
+                        }
                     }
                     catch//Manejo por si ocurre algun problema
                     {
@@ -170,7 +194,7 @@ namespace Tarea_ARC
                     catch//manejo de excepciones
                     {
                         errorProvider1.SetError(convertButton, "Hay campos vacios");
-                        MessageBox.Show("Ha ocurrido un error");
+                        MessageBox.Show("Verifique que los campos no esten vacios\nVerifique que no se repita mas de un punto decimal\nCorrija la entrada proporcionada");
                     }
                     break;
 
