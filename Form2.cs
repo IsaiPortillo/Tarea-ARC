@@ -28,9 +28,12 @@ namespace Tarea_ARC
                 bool isEvenParity = (countOnes % 2 == 0);
 
                 outputTextBox.Text = inputData + (isEvenParity ? "0" : "1");
+                errorProvider1.Clear();
+                inputTextBox.Clear();
             }
             else
             {
+                errorProvider1.SetError(calculateParityButton, "Hay campos vacios");
                 MessageBox.Show("Por favor, ingrese solo 0s y 1s válidos.", "Error de entrada", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -88,5 +91,27 @@ namespace Tarea_ARC
             return Regex.IsMatch(input, "^[01]+$");
         }
 
+        #region  Menu de opciones de los metodos
+        private void btnMetodos_Click(object sender, EventArgs e)
+        {
+            //Al dar click se mostraran las opciones
+            Opciones.Visible = true;
+        }
+
+        private void btnPariedad_Click(object sender, EventArgs e)
+        {
+            Opciones.Visible = false;
+        }
+
+        private void btnHamming_Click(object sender, EventArgs e)
+        {
+            Opciones.Visible = false;
+        }
+        #endregion
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
