@@ -21,61 +21,67 @@ namespace Tarea_ARC
         private void detectErrorsButton_Click(object sender, EventArgs e)
         {
             string inputData = inputTextBox.Text;
-
-            if (ValidateInput(inputData))
+            if (inputData.Length <= 6)
             {
-                int dataLength = inputData.Length;
-                int parityBits = CalculateParityBitCount(dataLength);
-                int totalBits = dataLength + parityBits;
-                char[] encodedData = new char[totalBits];
-
-                // Inicializa el arreglo de datos codificados con paridad
-                for (int i = 0; i < totalBits; i++)
+                if (ValidateInput(inputData))
                 {
-                    encodedData[i] = '0';
-                }
+                    int dataLength = inputData.Length;
+                    int parityBits = CalculateParityBitCount(dataLength);
+                    int totalBits = dataLength + parityBits;
+                    char[] encodedData = new char[totalBits];
 
-                int dataIndex = 0;
-                int parityIndex = 0;
-
-                // Llena los datos codificados con los datos de entrada
-                for (int i = 0; i < totalBits; i++)
-                {
-                    if (!IsPowerOfTwo(i + 1))
+                    // Inicializa el arreglo de datos codificados con paridad
+                    for (int i = 0; i < totalBits; i++)
                     {
-                        encodedData[i] = inputData[dataIndex];
-                        dataIndex++;
+                        encodedData[i] = '0';
                     }
-                }
 
-                // Calcula los bits de paridad
-                for (int i = 0; i < parityBits; i++)
-                {
-                    int parityBitIndex = (int)Math.Pow(2, i) - 1;
-                    char parityBit = CalculateParityBit(encodedData, parityBitIndex, totalBits);
-                    encodedData[parityBitIndex] = parityBit;
-                }
+                    int dataIndex = 0;
+                    int parityIndex = 0;
 
-                encodedTextBox.Text = new string(encodedData);
+                    // Llena los datos codificados con los datos de entrada
+                    for (int i = 0; i < totalBits; i++)
+                    {
+                        if (!IsPowerOfTwo(i + 1))
+                        {
+                            encodedData[i] = inputData[dataIndex];
+                            dataIndex++;
+                        }
+                    }
 
-                // Simula un error en un bit aleatorio
-                string corruptedData = SimulateError(encodedData);
-                corruptedTextBox.Text = corruptedData;
+                    // Calcula los bits de paridad
+                    for (int i = 0; i < parityBits; i++)
+                    {
+                        int parityBitIndex = (int)Math.Pow(2, i) - 1;
+                        char parityBit = CalculateParityBit(encodedData, parityBitIndex, totalBits);
+                        encodedData[parityBitIndex] = parityBit;
+                    }
 
-                // Detecta y muestra la posición del error
-                string errorPosition = DetectError(corruptedData);
-                if (string.IsNullOrEmpty(errorPosition))
-                {
-                    resultLabel.Text = "No se detectaron errores.";
+                    encodedTextBox.Text = new string(encodedData);
+
+                    // Simula un error en un bit aleatorio
+                    string corruptedData = SimulateError(encodedData);
+                    corruptedTextBox.Text = corruptedData;
+
+                    // Detecta y muestra la posición del error
+                    string errorPosition = DetectError(corruptedData);
+                    if (string.IsNullOrEmpty(errorPosition))
+                    {
+                        resultLabel.Text = "No se detectaron errores.";
+                    }
+                    else
+                    {
+                        resultLabel.Text = "Error detectado en la posición: " + errorPosition;
+                    }
                 }
                 else
                 {
-                    resultLabel.Text = "Error detectado en la posición: " + errorPosition;
+                    MessageBox.Show("Por favor, ingrese solo 0s y 1s válidos.", "Error de entrada", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Por favor, ingrese solo 0s y 1s válidos.", "Error de entrada", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Solo se permiten 6 bits de entrada", "Error de entrada", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
