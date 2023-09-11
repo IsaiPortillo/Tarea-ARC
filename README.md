@@ -27,20 +27,45 @@ Para la corrección de errores el programa permite una simulación a través del
    git clone https://github.com/IsaiPortillo/Tarea-ARC.git
    ```
    
-2.Ejecutar el programa en tu computadora, al hacerlo se mostrara la siguiente ventana.
+2.Ejecutar el programa en tu computadora, al hacerlo se mostrara la siguiente ventana de bienvenida para seleccionar
+cual es el proceso que queremos realizar.
+
   ![2023-09-09 17_05_21-Window](https://github.com/IsaiPortillo/Tarea-ARC/assets/102486877/2ccc9277-31b5-479f-a387-5c769fa5d868)
 
-  En la imagen podemos ver las opciones que se nos proporcionan para poder hacer nuestras respectivas pruebas 
+  En la imagen podemos ver las opciones que se nos proporcionan por medio de un menú al lado izquierdo para poder hacer nuestras respectivas pruebas 
 
 3.Elegir una de las opciones que se presentan:
- * Si damos click en la opción de convertir a binario podremos ver como se nos presenta el convertidor donde podremos elegir la acción que deseamos realizar,
-   hacer el ingreso de datos para posteriormente poder visualizar la respuesta esperada según nuestra elección del tipo de dato a convertir.
-
+# Conversor Binario.
+ * Si damos click en la opción de convertir a binario podremos ver como se nos presenta la siguiente interfaz con el conversor a binario.
    ![2023-09-09 17_12_24-Window](https://github.com/IsaiPortillo/Tarea-ARC/assets/102486877/90a92608-1a56-440b-a826-beccb654a228)
 
-* Al dar click en la opción de corrección de errores se nos mostrara el simulador para hacer las respectivas pruebas que se deseen por medio de los dos métodos establecidos.
+ * Acá podremos visualizar por medio de un comboBox las acciónes que podemos realizar, hacer el ingreso de datos para posteriormente poder visualizar la respuesta esperada según 
+    nuestra elección del tipo de dato a convertir.
+
+   ![2023-09-10 20_37_18-Window](https://github.com/IsaiPortillo/Tarea-ARC/assets/102486877/c5edf6af-d108-4905-97c8-432338a979bd)
+
+# Simulación de Correción de Errores
+* Al dar click en la opción de corrección de errores se nos mostrara el siguiente form el cual esta diseñado para simular el envío de datos que realizan los programas para
+  detectar errores.
+  
+  Dicho form  contiene apartados donde poder ingresar la información y visualizar la representación de este mismo.
   ![2023-09-09 17_18_22-Window](https://github.com/IsaiPortillo/Tarea-ARC/assets/102486877/d89a74e3-dcea-4007-9c3a-ebb4b62f5a0c)
+
+  En la parte de métodos, se encuentran dos maneras de representar estos números para detectarlos errores:
   ![2023-09-09 17_19_02-Window](https://github.com/IsaiPortillo/Tarea-ARC/assets/102486877/6215c22a-d311-4c86-97bd-4c61777683d8)
+  ![2023-09-10 20_54_54-Window](https://github.com/IsaiPortillo/Tarea-ARC/assets/102486877/d40ce468-4747-4178-8096-952b8ee1105d)
+
+  Los métodos que posee la interfaz es el método de paridad y el método de Haming, algoritmos utilizados para detección de errores en la computadora.
+
+4.Para conocer a un más de la funcionalidad de nuestro programa puedes consultar el siguiente manual donde se presentan algunos ejemplos de aplicación.📖
+  [MANUAL.pdf](https://github.com/IsaiPortillo/Tarea-ARC/files/12571788/MANUAL.pdf)
+
+
+## Características.🤓
+En la sección de representación binaria se han implementado o simulado que el procesador
+es de 16 bits de capacidad. Por lo tanto, en base a esta capacidad se han desarrollado la
+representación de números enteros sin signo, con signo, flotante, char y cadenas de
+caracteres, en forma binaria.
 
 ## Autores ✒️
 * John Elvis Arbaiza Velásquez - AV21019
@@ -50,7 +75,7 @@ Para la corrección de errores el programa permite una simulación a través del
 * Adilman Isaí Portillo Cerón
 * https://github.com/IsaiPortillo
 
-
+## Proyecto realizado con fines educativos 🎓
 
 
 
