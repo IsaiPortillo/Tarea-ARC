@@ -129,7 +129,7 @@ namespace Tarea_ARC
                                 short signedIntValue = short.Parse("-" + valueTextBox.Text);
                                 //convertimos el numero a binario y asignamos ese valor al TextBox donde se muestra el resultado
                                 binaryOutputLabel.Text = Convert.ToString(signedIntValue, 2).PadLeft(16, signedIntValue < 0 ? '1' : '0');
-                                res.Text = valueTextBox.Text + " =";
+                                res.Text ="-"+ valueTextBox.Text + " =";
                                 valueTextBox.Clear();
                                 errorProvider1.Clear();
                             }
@@ -145,7 +145,7 @@ namespace Tarea_ARC
                                 string conversionS = conversion.EnteroABinario(bitSignificativo);
                                 //declaramos una variable que contendra la respuesta que deseamos mostrar, uniendo las variables anteriores
                                 string valueSBinary = "1" + conversionS;
-                                res.Text = valueTextBox.Text + " =";
+                                res.Text ="-"+ valueTextBox.Text + " =";
                                 binaryOutputLabel.Text = valueSBinary;
                             }
                             else { Alerta(); }
@@ -284,6 +284,10 @@ namespace Tarea_ARC
                     lblError.Text = "";
                 }
                 validator.charValidation(sender, e, lblError);//validaciones para char
+            }
+            else if(dataTypeComboBox.SelectedIndex == 4)
+            {
+                lblError.Text = "";
             }
         }
     }

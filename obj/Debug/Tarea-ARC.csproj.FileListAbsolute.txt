@@ -87,3 +87,4 @@ D:\programación\Proyecto Arquitectura PC\Version 2.2\Tarea-ARC\obj\Debug\Tarea-
 D:\programación\Proyecto Arquitectura PC\Version 2.2\Tarea-ARC\obj\Debug\Tarea-ARC.csproj.CopyComplete
 D:\programación\Proyecto Arquitectura PC\Version 2.2\Tarea-ARC\obj\Debug\Tarea-ARC.exe
 D:\programación\Proyecto Arquitectura PC\Version 2.2\Tarea-ARC\obj\Debug\Tarea-ARC.pdb
+C:\Users\LENOVO\Desktop\ARC\Tarea-ARC\obj\Debug\Tarea_ARC.Form3.resources
