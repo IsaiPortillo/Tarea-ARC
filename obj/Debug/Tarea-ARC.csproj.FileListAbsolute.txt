@@ -69,3 +69,5 @@ D:\programación\Proyecto Arquitectura PC\Version2.1\Tarea-ARC\obj\Debug\Tarea-A
 D:\programación\Proyecto Arquitectura PC\Version2.1\Tarea-ARC\obj\Debug\Tarea-ARC.pdb
 D:\programación\Proyecto Arquitectura PC\Version2.1\Tarea-ARC\obj\Debug\Tarea_ARC.Inicio.resources
 C:\Users\LENOVO\Desktop\ARC\Tarea-ARC\obj\Debug\Tarea_ARC.Inicio.resources
+C:\Users\Isai\Documents\Universidad\Arq\Tarea C#\Tarea-ARC\obj\Debug\Tarea_ARC.Inicio.resources
+C:\Users\Isai\Documents\Universidad\Arq\Tarea C#\Tarea-ARC\obj\Debug\Tarea_ARC.Form3.resources
