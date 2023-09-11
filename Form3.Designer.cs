@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.inputTextBox = new System.Windows.Forms.TextBox();
             this.detectErrorsButton = new System.Windows.Forms.Button();
@@ -37,29 +38,37 @@
             this.resultLabel = new System.Windows.Forms.Label();
             this.corruptedTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(63, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(170, 13);
+            this.label1.Size = new System.Drawing.Size(285, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Ingrese datos de entrada (0s y 1s).";
             // 
             // inputTextBox
             // 
-            this.inputTextBox.Location = new System.Drawing.Point(15, 25);
+            this.inputTextBox.Location = new System.Drawing.Point(94, 31);
             this.inputTextBox.Name = "inputTextBox";
-            this.inputTextBox.Size = new System.Drawing.Size(167, 20);
+            this.inputTextBox.Size = new System.Drawing.Size(200, 20);
             this.inputTextBox.TabIndex = 1;
             // 
             // detectErrorsButton
             // 
-            this.detectErrorsButton.Location = new System.Drawing.Point(15, 51);
+            this.detectErrorsButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.detectErrorsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.detectErrorsButton.Font = new System.Drawing.Font("Bookman Old Style", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.detectErrorsButton.ForeColor = System.Drawing.Color.White;
+            this.detectErrorsButton.Location = new System.Drawing.Point(94, 57);
             this.detectErrorsButton.Name = "detectErrorsButton";
-            this.detectErrorsButton.Size = new System.Drawing.Size(167, 23);
+            this.detectErrorsButton.Size = new System.Drawing.Size(200, 36);
             this.detectErrorsButton.TabIndex = 2;
             this.detectErrorsButton.Text = "Detectar errores";
             this.detectErrorsButton.UseVisualStyleBackColor = true;
@@ -67,61 +76,74 @@
             // 
             // encodedTextBox
             // 
-            this.encodedTextBox.Location = new System.Drawing.Point(15, 93);
+            this.encodedTextBox.Location = new System.Drawing.Point(94, 128);
             this.encodedTextBox.Name = "encodedTextBox";
             this.encodedTextBox.ReadOnly = true;
-            this.encodedTextBox.Size = new System.Drawing.Size(167, 20);
+            this.encodedTextBox.Size = new System.Drawing.Size(200, 20);
             this.encodedTextBox.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 77);
+            this.label2.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(115, 106);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 13);
+            this.label2.Size = new System.Drawing.Size(158, 19);
             this.label2.TabIndex = 4;
             this.label2.Text = "Datos codificados:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 159);
+            this.label3.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(86, 216);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(125, 13);
+            this.label3.Size = new System.Drawing.Size(208, 19);
             this.label3.TabIndex = 5;
             this.label3.Text = "Resultados de detección";
             // 
             // resultLabel
             // 
             this.resultLabel.AutoSize = true;
-            this.resultLabel.Location = new System.Drawing.Point(12, 172);
+            this.resultLabel.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resultLabel.ForeColor = System.Drawing.Color.White;
+            this.resultLabel.Location = new System.Drawing.Point(63, 248);
             this.resultLabel.Name = "resultLabel";
-            this.resultLabel.Size = new System.Drawing.Size(35, 13);
+            this.resultLabel.Size = new System.Drawing.Size(19, 19);
             this.resultLabel.TabIndex = 6;
-            this.resultLabel.Text = "label4";
+            this.resultLabel.Text = "=";
             // 
             // corruptedTextBox
             // 
-            this.corruptedTextBox.Location = new System.Drawing.Point(15, 136);
+            this.corruptedTextBox.Location = new System.Drawing.Point(94, 183);
             this.corruptedTextBox.Name = "corruptedTextBox";
             this.corruptedTextBox.ReadOnly = true;
-            this.corruptedTextBox.Size = new System.Drawing.Size(167, 20);
+            this.corruptedTextBox.Size = new System.Drawing.Size(200, 20);
             this.corruptedTextBox.TabIndex = 7;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 120);
+            this.label4.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(115, 161);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 13);
+            this.label4.Size = new System.Drawing.Size(144, 19);
             this.label4.TabIndex = 8;
             this.label4.Text = "Datos corruptos:";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(422, 196);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.ClientSize = new System.Drawing.Size(383, 276);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.corruptedTextBox);
             this.Controls.Add(this.resultLabel);
@@ -131,8 +153,11 @@
             this.Controls.Add(this.detectErrorsButton);
             this.Controls.Add(this.inputTextBox);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "Form3";
-            this.Text = "Form3";
+            this.Text = "Metodo de hamming";
+            this.Load += new System.EventHandler(this.Form3_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,5 +174,6 @@
         private System.Windows.Forms.Label resultLabel;
         private System.Windows.Forms.TextBox corruptedTextBox;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
