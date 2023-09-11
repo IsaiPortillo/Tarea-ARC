@@ -57,6 +57,11 @@ cual es el proceso que queremos realizar.
 
   Los métodos que posee la interfaz es el método de paridad y el método de Haming, algoritmos utilizados para detección de errores en la computadora.
 
+* Al dar click en la opcion de info este nos dirigirá hacia este repositorio
+
+  ![2023-09-10 21_16_54-Window](https://github.com/IsaiPortillo/Tarea-ARC/assets/102486877/fbf000c3-f643-45f0-82f1-ec39a0bce4a9)
+
+
 4.Para conocer a un más de la funcionalidad de nuestro programa puedes consultar el siguiente manual donde se presentan algunos ejemplos de aplicación.📖
   [MANUAL.pdf](https://github.com/IsaiPortillo/Tarea-ARC/files/12571788/MANUAL.pdf)
 
