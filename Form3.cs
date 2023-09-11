@@ -176,5 +176,11 @@ namespace Tarea_ARC
             }
             return parityBits;
         }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+            // Centra el formulario en la pantalla
+            this.CenterToScreen();
+        }
     }
 }
