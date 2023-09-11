@@ -24,12 +24,20 @@ namespace Tarea_ARC
 
             if (ValidateInput(inputData))
             {
-                int countOnes = CountOnes(inputData);
-                bool isEvenParity = (countOnes % 2 == 0);
+                if (inputData.Length <= 6)
+                {
+                    int countOnes = CountOnes(inputData);
+                    bool isEvenParity = (countOnes % 2 == 0);
 
-                outputTextBox.Text = inputData + (isEvenParity ? "0" : "1");
-                errorProvider1.Clear();
-                inputTextBox.Clear();
+                    outputTextBox.Text = inputData + (isEvenParity ? "0" : "1");
+                    errorProvider1.Clear();
+                    inputTextBox.Clear();
+                }
+                else
+                {
+                    errorProvider1.SetError(calculateParityButton, "Maximo envio de datos, 6 bits");
+                    MessageBox.Show("El maximo de bits permitidos es de 6", "Error de entrada", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
