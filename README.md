@@ -1,4 +1,4 @@
-# # Convertidor Binario Y Programa de Simulación de Corrección de Errores. 💻
+## Convertidor Binario Y Programa de Simulación de Corrección de Errores. 💻
 ![LogoARQPC_Tarea](https://github.com/IsaiPortillo/Tarea-ARC/assets/102486877/253c6efb-fc99-44e5-af17-43057d8c1f49)
 
 El presente proyecto consiste en la puesta en practica de los temas impartidos en las diferentes cátedras sobre la representación

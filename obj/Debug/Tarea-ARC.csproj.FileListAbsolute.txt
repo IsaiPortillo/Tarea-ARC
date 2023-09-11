@@ -68,3 +68,4 @@ D:\programación\Proyecto Arquitectura PC\Version2.1\Tarea-ARC\obj\Debug\Tarea-A
 D:\programación\Proyecto Arquitectura PC\Version2.1\Tarea-ARC\obj\Debug\Tarea-ARC.exe
 D:\programación\Proyecto Arquitectura PC\Version2.1\Tarea-ARC\obj\Debug\Tarea-ARC.pdb
 D:\programación\Proyecto Arquitectura PC\Version2.1\Tarea-ARC\obj\Debug\Tarea_ARC.Inicio.resources
+C:\Users\LENOVO\Desktop\ARC\Tarea-ARC\obj\Debug\Tarea_ARC.Inicio.resources
