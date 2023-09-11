@@ -24,12 +24,20 @@ namespace Tarea_ARC
 
             if (ValidateInput(inputData))
             {
-                int countOnes = CountOnes(inputData);
-                bool isEvenParity = (countOnes % 2 == 0);
+                if (inputData.Length <= 6)
+                {
+                    int countOnes = CountOnes(inputData);
+                    bool isEvenParity = (countOnes % 2 == 0);
 
-                outputTextBox.Text = inputData + (isEvenParity ? "0" : "1");
-                errorProvider1.Clear();
-                inputTextBox.Clear();
+                    outputTextBox.Text = inputData + (isEvenParity ? "0" : "1");
+                    errorProvider1.Clear();
+                    inputTextBox.Clear();
+                }
+                else
+                {
+                    errorProvider1.SetError(calculateParityButton, "Maximo envio de datos, 6 bits");
+                    MessageBox.Show("El maximo de bits permitidos es de 6", "Error de entrada", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
@@ -106,6 +114,10 @@ namespace Tarea_ARC
         private void btnHamming_Click(object sender, EventArgs e)
         {
             Opciones.Visible = false;
+            Form3 formulario = new Form3(); // Reemplaza Form2 por el nombre de tu formulario
+
+            // Muestra el formulario
+            formulario.Show();
         }
         #endregion
 
@@ -113,5 +125,7 @@ namespace Tarea_ARC
         {
             this.Close();
         }
+
+
     }
 }
