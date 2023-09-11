@@ -114,6 +114,10 @@ namespace Tarea_ARC
         private void btnHamming_Click(object sender, EventArgs e)
         {
             Opciones.Visible = false;
+            Form3 formulario = new Form3(); // Reemplaza Form2 por el nombre de tu formulario
+
+            // Muestra el formulario
+            formulario.Show();
         }
         #endregion
 
@@ -121,5 +125,7 @@ namespace Tarea_ARC
         {
             this.Close();
         }
+
+
     }
 }
